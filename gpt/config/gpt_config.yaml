@@ -1,0 +1,27 @@
+TOKENIZER:
+  vocab_size: 500
+  tokenizer_input: "even-tiner-stories.txt"
+  tokenizer_data_file: "gpt/data/tokenizer_data.json"
+
+TRAINING:
+  n_epochs: 500
+  batch_size: 32
+  lr: 1e-3
+  epoch_steps_train: 500
+  epoch_steps_eval: 100
+  context_size: 128
+
+GPT:
+  n_encoders: 4
+  embed_dim: 384
+  n_heads: 4
+  dropout_rate: 0.2
+  inf_tokens: 256
+
+INFERENCE:
+  state_dict_path: "artifacts/model/GPT_model.pth"
+  max_new_tokens: 128
+
+LOGGING:
+  logging_dir: "artifacts/logs"
+  media_dir: "artifacts/media"
